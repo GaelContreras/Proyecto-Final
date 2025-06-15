@@ -1,6 +1,7 @@
-#pragma once 
-#include <SFML/Graphics.hpp>
+#ifndef BRICK_HPP
+#define BRICK_HPP
 
+#include <SFML/Graphics.hpp>
 
 class Brick { 
 public: 
@@ -14,3 +15,5 @@ private:
     sf::RectangleShape shape; 
     bool destroyed; 
 };
+
+#endif
