@@ -13,6 +13,7 @@ public:
     void invertVelocityX();
     void invertVelocityY();
     void reset(float x, float y);
+    sf::Vector2f getVelocity() const;
 
 private:
     sf::CircleShape shape;
