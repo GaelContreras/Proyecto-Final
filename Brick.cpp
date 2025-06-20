@@ -1,7 +1,5 @@
 #include "Brick.hpp"
 
-#include "Brick.hpp"
-
 Brick::Brick(float x, float y, float width, float height, sf::Color color)
     : destroyed(false)
 {
