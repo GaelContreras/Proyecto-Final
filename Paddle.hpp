@@ -8,7 +8,7 @@ public:
     Paddle(float x, float y, float width, float height);
     void move(float dx);
     void update(float dt, const sf::RenderWindow& window);
-    void draw(sf::RenderWindow& window) const;
+    void draw(sf::RenderWindow& window) const; 
     sf::FloatRect getBounds() const;
     void reset(float x, float y);
 
