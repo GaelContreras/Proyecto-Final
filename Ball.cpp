@@ -1,17 +1,17 @@
 #include "Ball.hpp"
 
 Ball::Ball(float x, float y, float radius)
-    : speed(300.0f)
+    : shape(radius), speed(300.0f)
 {
-    shape.setRadius(radius);
-    shape.setFillColor(sf::Color::Red);
+    shape.setPosition(x, y);
     shape.setOrigin(radius, radius);
-    setPosition(x, y);
-    velocity = {speed, -speed};
+    shape.setFillColor(sf::Color::White);
+  
+    velocity = sf::Vector2f(0.7f, -1.0f);
 }
 
 void Ball::update(float dt) {
-    shape.move(velocity * dt);
+    shape.move(velocity * speed * dt);
 }
 
 void Ball::draw(sf::RenderWindow& window) const {
@@ -36,5 +36,9 @@ void Ball::invertVelocityY() {
 
 void Ball::reset(float x, float y) {
     setPosition(x, y);
-    velocity = {speed, -speed};
+    velocity = sf::Vector2f(0.7f, -1.0f); 
+}
+
+sf::Vector2f Ball::getVelocity() const { 
+    return velocity;
 }
